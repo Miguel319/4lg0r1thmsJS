@@ -14,14 +14,14 @@ For example if you mean to replace the word "Book" with the word "dog", it shoul
  replaced as "Dog"
 */
 var myReplace = function (str, before, after) {
-    var newArr = str.split(' ');
+    var newArr = str.split(" ");
     var beforeIndex = newArr.indexOf(before);
-    var isBeforeUpperCase = (before[0] === before[0].toUpperCase());
+    var isBeforeUpperCase = before[0] === before[0].toUpperCase();
     if (beforeIndex !== undefined) {
-        newArr.splice(beforeIndex, 1, isBeforeUpperCase ?
-            after[0].toUpperCase() + after.slice(1, after.length)
+        newArr.splice(beforeIndex, 1, isBeforeUpperCase
+            ? after[0].toUpperCase() + after.slice(1, after.length)
             : after);
     }
-    return newArr.join(' ');
+    return newArr.join(" ");
 };
 console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
