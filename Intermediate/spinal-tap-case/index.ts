@@ -3,12 +3,13 @@ Convert a string to spinal case.Spinal
 case is all - lowercase - words - joined - by - dashes.
 */
 
-const spinalCase = (str: string)  => {
-    
+const spinalCase = (str: string) => {
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
 
-    const newStr = str.replace(/\((._\s+)\)/, "-" );
-
-    return newStr;
+  return str
+    .toLowerCase()
+    .split(/(?:_| )+/)
+    .join("-");
 };
 
-console.log(spinalCase('This_Is Spinal_Tap'));
+console.log(spinalCase("This_Is Spinal_Tap"));
