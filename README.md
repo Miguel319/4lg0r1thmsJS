@@ -30,5 +30,7 @@ Retos extraídos de [JavaScript Algorithms and Data Structures (FreeCodeCamp)](h
 * Seek-N-Destroy
 * Spinal-Tap-Case
 * Wherefore-Art-Thou
-* Make a person
-* Sorted Union
+* Make-a-Person
+* Sorted-Union
+* Sum-All-Primes
+* Missing-Letters
